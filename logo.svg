@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with thick neon blue outline -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#00f0ff" stroke-width="12" filter="url(#glow-blue)"/>
+  
+  <!-- Left figure - Tactical/SWAT (neon blue) -->
+  <g fill="none" stroke="#00f0ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-blue)">
+    <!-- Helmet with visor -->
+    <path d="M 30 70 Q 25 55 30 45 Q 40 38 50 40 Q 55 42 58 50 L 58 65 Q 58 72 55 76 L 42 80 Q 35 82 30 78 Z"/>
+    <!-- Visor/Goggles - two vertical parallel lines -->
+    <line x1="45" y1="58" x2="45" y2="68" stroke-width="5"/>
+    <line x1="52" y1="58" x2="52" y2="68" stroke-width="5"/>
+    <!-- Body/Shoulders -->
+    <path d="M 42 80 L 38 92 L 40 100"/>
+    <path d="M 35 85 L 32 95"/>
+  </g>
+  
+  <!-- Right figure - Terrorist with pistol (neon orange) -->
+  <g fill="none" stroke="#ff6b35" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-orange)">
+    <!-- Head/Balaclava -->
+    <path d="M 170 50 Q 175 40 165 40 Q 155 40 145 45 Q 140 50 138 60 L 138 75 Q 138 85 145 90 L 160 95 Q 170 95 170 85 Z"/>
+    <!-- Eye visible -->
+    <circle cx="155" cy="65" r="5" fill="#ff6b35"/>
+    <!-- Pistol -->
+    <path d="M 145 90 L 165 90 L 170 85 L 170 78 L 165 78 L 160 80 L 150 83 L 145 85 Z"/>
+    <line x1="150" y1="83" x2="160" y2="80" stroke-width="4"/>
+    <line x1="145" y1="90" x2="145" y2="98" stroke-width="4"/>
+    <!-- Body/Shoulders -->
+    <path d="M 160 95 L 165 105 L 163 115"/>
+    <path d="M 168 100 L 170 110"/>
+  </g>
+  
+  <!-- Central target reticle (neon orange) -->
+  <g fill="none" stroke="#ff6b35" stroke-width="5" filter="url(#glow-orange)">
+    <circle cx="100" cy="100" r="18"/>
+    <circle cx="100" cy="100" r="3" fill="#ff6b35"/>
+    <line x1="100" y1="70" x2="100" y2="130"/>
+    <line x1="70" y1="100" x2="130" y2="100"/>
+  </g>
+  
+  <!-- Filters for glow effects -->
+  <defs>
+    <filter id="glow-blue">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-orange">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
